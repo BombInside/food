@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  res_date: 2016-07-19
+  res_time: 2016-07-19 08:36:16
+  restoraunt: MyString
+  pers_count: 1
+  cont_email: MyString
+  cont_name: MyString
+  cont_phone: MyString
+  cont_message: MyText
+  user_id: 
+
+two:
+  res_date: 2016-07-19
+  res_time: 2016-07-19 08:36:16
+  restoraunt: MyString
+  pers_count: 1
+  cont_email: MyString
+  cont_name: MyString
+  cont_phone: MyString
+  cont_message: MyText
+  user_id: 
