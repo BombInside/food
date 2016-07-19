@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Res date:</strong>
+  <%= @reservation.res_date %>
+</p>
+
+<p>
+  <strong>Res time:</strong>
+  <%= @reservation.res_time %>
+</p>
+
+<p>
+  <strong>Restoraunt:</strong>
+  <%= @reservation.restoraunt %>
+</p>
+
+<p>
+  <strong>Pers count:</strong>
+  <%= @reservation.pers_count %>
+</p>
+
+<p>
+  <strong>Cont email:</strong>
+  <%= @reservation.cont_email %>
+</p>
+
+<p>
+  <strong>Cont name:</strong>
+  <%= @reservation.cont_name %>
+</p>
+
+<p>
+  <strong>Cont phone:</strong>
+  <%= @reservation.cont_phone %>
+</p>
+
+<p>
+  <strong>Cont message:</strong>
+  <%= @reservation.cont_message %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reservation.user %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

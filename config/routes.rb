@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reservations
+
   resources :special_promotions
 
   resources :restoraunts

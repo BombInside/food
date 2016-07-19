@@ -1,0 +1,53 @@
+<%= form_for(@reservation) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :res_date %><br>
+    <%= f.date_select :res_date %>
+  </div>
+  <div class="field">
+    <%= f.label :res_time %><br>
+    <%= f.time_select :res_time %>
+  </div>
+  <div class="field">
+    <%= f.label :restoraunt %><br>
+    <%= f.text_field :restoraunt %>
+  </div>
+  <div class="field">
+    <%= f.label :pers_count %><br>
+    <%= f.number_field :pers_count %>
+  </div>
+  <div class="field">
+    <%= f.label :cont_email %><br>
+    <%= f.text_field :cont_email %>
+  </div>
+  <div class="field">
+    <%= f.label :cont_name %><br>
+    <%= f.text_field :cont_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cont_phone %><br>
+    <%= f.text_field :cont_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :cont_message %><br>
+    <%= f.text_area :cont_message %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
