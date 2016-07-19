@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prom start date:</strong>
+  <%= @special_promotion.prom_start_date %>
+</p>
+
+<p>
+  <strong>Prom end date:</strong>
+  <%= @special_promotion.prom_end_date %>
+</p>
+
+<p>
+  <strong>Prom title:</strong>
+  <%= @special_promotion.prom_title %>
+</p>
+
+<p>
+  <strong>Old price:</strong>
+  <%= @special_promotion.old_price %>
+</p>
+
+<p>
+  <strong>New price:</strong>
+  <%= @special_promotion.new_price %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @special_promotion.user %>
+</p>
+
+<p>
+  <strong>Restoraunt:</strong>
+  <%= @special_promotion.restoraunt %>
+</p>
+
+<%= link_to 'Edit', edit_special_promotion_path(@special_promotion) %> |
+<%= link_to 'Back', special_promotions_path %>

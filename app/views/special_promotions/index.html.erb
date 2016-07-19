@@ -1,0 +1,37 @@
+<h1>Listing special_promotions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prom start date</th>
+      <th>Prom end date</th>
+      <th>Prom title</th>
+      <th>Old price</th>
+      <th>New price</th>
+      <th>User</th>
+      <th>Restoraunt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @special_promotions.each do |special_promotion| %>
+      <tr>
+        <td><%= special_promotion.prom_start_date %></td>
+        <td><%= special_promotion.prom_end_date %></td>
+        <td><%= special_promotion.prom_title %></td>
+        <td><%= special_promotion.old_price %></td>
+        <td><%= special_promotion.new_price %></td>
+        <td><%= special_promotion.user %></td>
+        <td><%= special_promotion.restoraunt %></td>
+        <td><%= link_to 'Show', special_promotion %></td>
+        <td><%= link_to 'Edit', edit_special_promotion_path(special_promotion) %></td>
+        <td><%= link_to 'Destroy', special_promotion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Special promotion', new_special_promotion_path %>
