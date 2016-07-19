@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prom_start_date: 2016-07-19 08:36:13
+  prom_end_date: 2016-07-19 08:36:13
+  prom_title: MyString
+  old_price: MyString
+  new_price: MyString
+  user_id: 
+  restoraunt_id: 
+
+two:
+  prom_start_date: 2016-07-19 08:36:13
+  prom_end_date: 2016-07-19 08:36:13
+  prom_title: MyString
+  old_price: MyString
+  new_price: MyString
+  user_id: 
+  restoraunt_id: 
