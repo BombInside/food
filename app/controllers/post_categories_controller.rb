@@ -1,4 +1,8 @@
 class PostCategoriesController < ApplicationController
+
+  #->Prelang (scaffolding:rails/scope_to_user)
+  before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
+
   before_action :set_post_category, only: [:show, :edit, :update, :destroy]
 
   # GET /post_categories
