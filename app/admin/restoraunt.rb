@@ -1,4 +1,5 @@
 ActiveAdmin.register Restoraunt do
+  permit_params :title, :phone, :w_time_start, :w_time_end, :wr_time_start, :wr_time_end
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
