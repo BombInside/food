@@ -29,6 +29,7 @@ class RestorauntsController < ApplicationController
   # POST /restoraunts.json
   def create
     @restoraunt = Restoraunt.new(restoraunt_params)
+    @restoraunt.user = current_user
 
     respond_to do |format|
       if @restoraunt.save
