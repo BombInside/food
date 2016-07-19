@@ -29,6 +29,7 @@ class PostCategoriesController < ApplicationController
   # POST /post_categories.json
   def create
     @post_category = PostCategory.new(post_category_params)
+    @post_category.user = current_user
 
     respond_to do |format|
       if @post_category.save
