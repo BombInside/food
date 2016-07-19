@@ -29,6 +29,7 @@ class SpecialPromotionsController < ApplicationController
   # POST /special_promotions.json
   def create
     @special_promotion = SpecialPromotion.new(special_promotion_params)
+    @special_promotion.user = current_user
 
     respond_to do |format|
       if @special_promotion.save
