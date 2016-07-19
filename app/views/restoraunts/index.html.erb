@@ -1,0 +1,39 @@
+<h1>Listing restoraunts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Reservation</th>
+      <th>Title</th>
+      <th>Phone</th>
+      <th>W time start</th>
+      <th>W time end</th>
+      <th>Wr time start</th>
+      <th>Wr time end</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restoraunts.each do |restoraunt| %>
+      <tr>
+        <td><%= restoraunt.user %></td>
+        <td><%= restoraunt.reservation %></td>
+        <td><%= restoraunt.title %></td>
+        <td><%= restoraunt.phone %></td>
+        <td><%= restoraunt.w_time_start %></td>
+        <td><%= restoraunt.w_time_end %></td>
+        <td><%= restoraunt.wr_time_start %></td>
+        <td><%= restoraunt.wr_time_end %></td>
+        <td><%= link_to 'Show', restoraunt %></td>
+        <td><%= link_to 'Edit', edit_restoraunt_path(restoraunt) %></td>
+        <td><%= link_to 'Destroy', restoraunt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restoraunt', new_restoraunt_path %>

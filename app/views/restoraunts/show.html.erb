@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @restoraunt.user %>
+</p>
+
+<p>
+  <strong>Reservation:</strong>
+  <%= @restoraunt.reservation %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @restoraunt.title %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @restoraunt.phone %>
+</p>
+
+<p>
+  <strong>W time start:</strong>
+  <%= @restoraunt.w_time_start %>
+</p>
+
+<p>
+  <strong>W time end:</strong>
+  <%= @restoraunt.w_time_end %>
+</p>
+
+<p>
+  <strong>Wr time start:</strong>
+  <%= @restoraunt.wr_time_start %>
+</p>
+
+<p>
+  <strong>Wr time end:</strong>
+  <%= @restoraunt.wr_time_end %>
+</p>
+
+<%= link_to 'Edit', edit_restoraunt_path(@restoraunt) %> |
+<%= link_to 'Back', restoraunts_path %>

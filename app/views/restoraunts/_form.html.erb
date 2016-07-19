@@ -1,0 +1,49 @@
+<%= form_for(@restoraunt) do |f| %>
+  <% if @restoraunt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restoraunt.errors.count, "error") %> prohibited this restoraunt from being saved:</h2>
+
+      <ul>
+      <% @restoraunt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :reservation_id %><br>
+    <%= f.text_field :reservation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :w_time_start %><br>
+    <%= f.time_select :w_time_start %>
+  </div>
+  <div class="field">
+    <%= f.label :w_time_end %><br>
+    <%= f.time_select :w_time_end %>
+  </div>
+  <div class="field">
+    <%= f.label :wr_time_start %><br>
+    <%= f.time_select :wr_time_start %>
+  </div>
+  <div class="field">
+    <%= f.label :wr_time_end %><br>
+    <%= f.time_select :wr_time_end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
