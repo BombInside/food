@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  reservation_id: 
+  title: MyString
+  phone: MyString
+  w_time_start: 2016-07-19 08:36:08
+  w_time_end: 2016-07-19 08:36:08
+  wr_time_start: 2016-07-19 08:36:08
+  wr_time_end: 2016-07-19 08:36:08
+
+two:
+  user_id: 
+  reservation_id: 
+  title: MyString
+  phone: MyString
+  w_time_start: 2016-07-19 08:36:08
+  w_time_end: 2016-07-19 08:36:08
+  wr_time_start: 2016-07-19 08:36:08
+  wr_time_end: 2016-07-19 08:36:08
