@@ -31,6 +31,7 @@ Rails.application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
+  config.i18n.available_locales = :ru
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 

@@ -1,0 +1,945 @@
+
+
+    <body>
+        <div class="loader"><img src="images/loader.png" alt=""></div>
+        <!--================= main start ================-->
+        <div id="main">
+            <!--=============== header ===============-->	
+            <header>
+                <div class="header-inner">
+                    <div class="container">                 
+                        <!--navigation social links-->
+                        <div class="nav-social">
+                        <ul style="    float: left;
+    color: #fff;">
+                                <li style="    color: #fff;
+    font-size: 16px;">050 000 00 00</li>
+                                <li style="    color: #fff;
+    font-size: 16px;">050 000 00 00</li>
+                                <li style="    color: #fff;
+    font-size: 16px;">050 000 00 00</li>
+                            </ul>
+                            <ul>
+                                <li ><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--logo-->             
+                        <div class="logo-holder">
+                            <a href="#">
+                            Логотип Здесь
+                     <!--       <img src="images/logo.png" class="respimg logo-vis" alt="">
+                            <img src="images/logo2.png" class="respimg logo-notvis" alt=""> -->
+                            </a>
+                        </div>
+                        <!--Navigation -->
+                        <div class="nav-holder">
+                            <nav class="scroll-nav">
+                                <ul>
+                                    <li><a href="#sec1" class="act-link">Главная</a></li>
+                                    <li><a href="#sec2">О нас</a></li>
+                                    <li><a href="#sec3">Меню</a></li>
+                                    <li><a href="#sec4">Галерея</a></li>
+                                    <li><a href="#sec5">Бронирование</a></li>
+                                    <li><a href="#sec6">Контакты</a></li>
+                                   <!-- <li><a href="blog.html" class="external">Блог</a></li>
+                                    <li><a href="shop.html" class="external">Магазин</a></li> -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--header end-->
+            <!--=============== wrapper ===============-->	
+            <div id="wrapper">
+                <!--=============== Hero content ===============-->
+                <div class="content full-height hero-content" id="sec1">
+                    <div class="slideshow-container">
+                        <!-- vimeo video-->	
+                        <div class="media-container" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
+                            <div class="video-container">
+                            	<div class="bg mob-bg" style="background-image: url(images/bg/1.jpg)"></div>
+                                <div class="video-holder">
+                                    <iframe src="http://player.vimeo.com/video/25093978?autoplay=1&amp;loop=1" webkitallowfullscreen mozallowfullscreen allowfullscreen class="vimeo-player"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-title-holder">
+
+                            <div class="overlay"></div>
+                            <div class="hero-title">
+
+                                <div class="hero-decor b-dec">
+                                    <div class="half-circle"></div>
+                                </div>
+                                <div class="separator color-separator"></div>
+                                <h3>Вас приветствует Food Studio</h3>
+                                <h4>Сеть семейных кафе и ресторанов</h4>
+                            </div>
+                        </div>
+                        <div class="hero-link">
+                            <a class="custom-scroll-link" href="#sec2"><i class="fa fa-angle-double-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--hero end-->
+                <div class="content">
+                    <!--=============== About ===============-->
+                    <section class="about-section" id="sec2">
+                        <div class="container">
+                            <div class="row">
+                                <!--about text-->
+                                <div class="col-md-12">
+                                    <div class="section-title">
+                                        <h3>Наши заведения</h3>
+                                        <h4 class="decor-title">Сеть наших заведений</h4>
+                                        <div class="separator color-separator"></div>
+                                    </div>
+
+                                    <div>
+                            <ul style="list-style: none; display: inline-flex; float: left;">
+                            <% @restoraunts.each do |restoraunt| %>
+                                <li style="margin: auto 10px;">
+	                                <%= link_to "#0", id: "modal-trigger-#{restoraunt.id}", data: {type: "cd-modal-trigger"}, class: "cd-btn" do %>
+	                                	<%= image_tag restoraunt.logo, style: "width: 100%;" %>
+	                                <% end %>
+                                        <div class="cd-modal" data-modal="modal-trigger-<%=restoraunt.id %>">
+        <div class="cd-svg-bg" 
+        data-step1="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z" 
+        data-step2="M33.8,690l-188.2-300.3c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1L959.6,110c0.1,0.1,0,0.3-0.1,0.3 L34.1,690.1C34,690.2,33.9,690.1,33.8,690z" 
+        data-step3="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z" 
+        data-step4="M-329.3,504.3l-272.5-435c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1l272.5,435c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-329,504.5-329.2,504.5-329.3,504.3z" 
+        data-step5="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z" 
+        data-step6="M476.4,1013.4L205,580.3c-0.1-0.1,0-0.3,0.1-0.3L1130.5,0.2c0.1-0.1,0.3,0,0.3,0.1l271.4,433.1c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C476.6,1013.6,476.5,1013.5,476.4,1013.4z">
+            <svg height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 800 500">
+                <title>SVG Modal background</title>
+                <path id="cd-changing-path-<%=restoraunt.id+1*25 %>" d="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z"/>
+                <path id="cd-changing-path-<%=restoraunt.id+2*33 %>" d="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z"/>
+                <path id="cd-changing-path-<%=restoraunt.id+3*48 %>" d="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z"/>
+            </svg>
+        </div>
+
+        <div class="cd-modal-content">
+            <p>
+                <%= restoraunt.title %>
+            </p>
+
+            <p>
+                <%= restoraunt.phone %>
+            </p>
+        </div> <!-- cd-modal-content -->
+
+        <a href="#0" class="modal-close">Close</a>
+    </div> 
+                           
+                                </li>
+                            <% end %>
+                             
+                            </ul>
+
+                            </div>
+
+                                </div>
+                                <!-- about images-->
+
+                            </div>
+                        </div>
+                        <div class="cd-cover-layer"></div> <!-- .cd-cover-layer -->
+                    </section>
+                                        <!--=============== Weekly Deals ===============-->
+                    <section class="parallax-section">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Предложения недели</h2>
+                            <h3>Акционные и скидочные предложения недели</h3>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div class="row">
+                                <!-- 1 -->
+                            <% @special_promotions.each do |special_promotion| %>
+                                <div class="col-md-12">                                    
+                                    <div class="promotion-item">
+                                  		<div class="promotion-title">
+                                            <h4><%= special_promotion.restoraunt.title.to_s %></h4>
+                                            <span>( <%= special_promotion.prom_start_date.strftime("%d.%m.%Y") %> - <%= special_promotion.prom_end_date.strftime("%d.%m.%Y") %> )</span>
+                                        </div>
+                                        <div class="promotion-details">
+                                            <div class="promotion-desc"><%= special_promotion.prom_title %></div>
+                                            <div class="promotion-dot"></div>
+                                            <div class="promotion-prices"><span class="promotion-price"><%= special_promotion.old_price %> грн. </span><span class="promotion-discount"><%= special_promotion.new_price %> грн.</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            </div>
+
+                            <a class="custom-scroll-link align-link link" href="#sec5">Резервация столов онлайн</a>
+                        </div>
+                    </section>
+                    <!--section end-->
+                                        <!--=============== About 2 ===============-->
+                    <section class="about-section">
+                        <!-- triangle decoration-->
+                        <div class="triangle-decor">
+                        </div>
+                        <div class="container">
+                            <div class="row">
+						
+                                <div class="col-md-12">
+                                    <div class="single-slider-holder">
+                                        <div class="customNavigation">
+                                            <a class="next-slide transition"><i class="fa fa-angle-right"></i></a>
+                                            <a class="prev-slide transition"><i class="fa fa-angle-left"></i></a>
+                                        </div>
+                                        <div class="single-slider owl-carousel">
+                        <% @events.each do |event| %>                
+                                            <!-- 1 -->
+                                            <div class="item">
+                                            <%= image_tag(event.event_title, class: "respimg  col-md-6", style: "width: 49em; overflow: hidden;float: left; display: inline-flex; margin-right: 1em;", alt: event.title) %>
+                                                                            <div class="col-md-6">
+                                    <div class="section-title">
+                                        <h3><%= event.title %></h3>
+                                        <h4 class="decor-title">Заведение: <%= event.restoraunt.title.to_s %></h4><br>
+                                        <h4 class="decor-title">Старт: <%= event.start_date.strftime("%d.%m.%Y") %></h4>
+                                        <div class="separator color-separator"></div>
+                                    </div>
+                                    <p><%= event.desctiption.mb_chars.upcase.to_s %></p>
+                                </div>
+                                             </div>   
+                                            
+
+                        <% end %>                    
+                                        </div>
+                                    </div>
+                                </div>
+						
+
+                            </div>
+                        </div>
+                    </section>
+                    <!--section end-->
+                                        <!--=============== testimonials ===============-->
+                    <section class="parallax-section">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Отзывы о нас</h2>
+                            <h3>Что о нас говорят наши гости</h3>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="testimonials-holder">
+                                        <div class="customNavigation">
+                                            <a class="prev-slide transition"><i class="fa fa-long-arrow-left"></i></a>
+                                            <a class="next-slide transition"><i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                        <div class="testimonials-slider owl-carousel">
+                                            <div class="item">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                                <p>" Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword "</p>
+                                                <h4><a href="#" target="_blank">Jone Doe</a></h4>
+                                            </div>
+                                            <div class="item">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li> <i class="fa fa-star-half"></i></li>
+                                                </ul>
+                                                <p>" Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword "</p>
+                                                <h4><a href="#" target="_blank">Jone Doe</a></h4>
+                                            </div>
+                                            <div class="item">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                                <p>" Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword "</p>
+                                                <h4><a href="#" target="_blank">Jone Doe</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="section-icon"><i class="fa fa-quote-left"></i></div>
+                        </div>
+                    </section>
+                    <!--section end-->
+                    
+
+
+                    <!--=============== team ===============-->
+                    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="section-title">
+                                <h3>Поведители конкурсов</h3>
+                                <h4>Победители наших конкурсов</h4>
+                                <div class="separator color-separator"></div>
+                            </div>
+                            <div class="inner">
+                                <p> Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+                            </div>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div  class="team-links">
+                                <!-- member 1 link -->
+                                <div class="team-item">
+                                    <a href="team/mem1.html" class="popup-with-move-anim">
+                                    <span class="team-details">подробнее</span>
+                                    <img src="images/team/thumbnails/1.jpg" alt="" class="respimg">
+                                    <span class="chefname">Имя Фамилия</span>
+                                    <span class="chefinfo">Выигрыш</span>
+                                    </a>
+                                </div>
+                                <!-- member 2 link -->
+                                <div class="team-item">
+                                    <a href="team/mem2.html" class="popup-with-move-anim">
+                                    <span class="team-details">подробнее</span>
+                                    <img src="images/team/thumbnails/1.jpg" alt="" class="respimg">
+                                    <span class="chefname">Имя Фамилия</span>
+                                    <span class="chefinfo">Выигрыш</span>
+                                    </a>
+                                </div>
+                                <!-- member 3 link -->
+                                <div class="team-item">
+                                    <a href="team/mem3.html" class="popup-with-move-anim">
+                                    <span class="team-details">подробнее</span>
+                                    <img src="images/team/thumbnails/1.jpg" alt="" class="respimg">
+                                    <span class="chefname">Имя Фамилия</span>
+                                    <span class="chefinfo">Выигрыш</span>
+                                    </a>
+                                </div>
+                                <!-- member 4 link -->
+                                <div class="team-item">
+                                    <a href="team/mem4.html" class="popup-with-move-anim">
+                                    <span class="team-details">подробнее</span>
+                                    <img src="images/team/thumbnails/1.jpg" alt="" class="respimg">
+                                    <span class="chefname">Имя Фамилия</span>
+                                    <span class="chefinfo">Выигрыш</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--section end-->
+                    <!--=============== menu ===============-->
+                    <section class="parallax-section" id="sec3">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Наше меню</h2>
+                            <h3>Все самое свежее и вкусное для наших гостей</h3>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                        </div>
+                    </section>
+                    <!--section end-->
+                    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="section-title">
+                                <h3>Гарячие бюда</h3>
+                                <h4 class="decor-title">Описание</h4>
+                                <div class="separator color-separator"></div>
+                            </div>
+                            <div class="menu-holder">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Steak Filet</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$130</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Miso chicken</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$26</div>
+                                                </div>
+                                            </div>
+                                            <p>Fingerling Potatoes, Ossetra Caviar</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Doner Burger</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$130</div>
+                                                </div>
+                                            </div>
+                                            <p>Excepteur sint occaecat cupidatat noproident</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item  hot-deal">
+                                            <span class="hot-desc">Chef selection</span>
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Roast Chicken</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$130</div>
+                                                </div>
+                                            </div>
+                                            <p>Duis aute irure dolor in reprehenderit voluptate</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Grill Salmont</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$26</div>
+                                                </div>
+                                            </div>
+                                            <p>Nemo enim ipam voluptatem voluptas aspernatur aut</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Fried Potatoes</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$130</div>
+                                                </div>
+                                            </div>
+                                            <p>Excepteur sint occaecat cupidatat noproident</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div class="section-title">
+                                <h3>Десерти</h3>
+                                <h4 class="decor-title">Сладенькое для детей и взрослых</h4>
+                                <div class="separator color-separator"></div>
+                            </div>
+                            <div class="menu-holder">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Toro pie</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$23</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Creme Brulee</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$26</div>
+                                                </div>
+                                            </div>
+                                            <p>Fingerling Potatoes, Ossetra Caviar</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Tarte Tatin</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$153</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Cheese Board</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$45</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item hot-deal">
+                                            <span class="hot-desc">Sale - 20%</span>
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Chocolate brownie</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$87</div>
+                                                </div>
+                                            </div>
+                                            <p>Fingerling Potatoes, Ossetra Caviar</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Lemon Meringue</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$211</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Banana Cream</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$211</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+
+                                        <!--menu item end-->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!--menu item-->
+                                        <div class="menu-item">
+                                            <div class="menu-item-details">
+                                                <div class="menu-item-desc"><a href="images/bg/1.jpg" class="image-popup">Wildberry</a></div>
+                                                <div class="menu-item-dot"></div>
+                                                <div class="menu-item-prices">
+                                                    <div class="menu-item-price">$211</div>
+                                                </div>
+                                            </div>
+                                            <p>Sed quia non numquam eius modi tempora</p>
+                                        </div>
+                                        <!--menu item end-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="parallax-section" id="sec4">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Наша галерея</h2>
+                            <h3>Фото с мероприятий и не только</h3>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="gallery-filters">
+                                <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*">Все</a>
+                                <a href="#" class="gallery-filter " data-filter=".menu">Меню </a>
+                                <a href="#" class="gallery-filter" data-filter=".rest">Интерьер</a>
+                                <a href="#" class="gallery-filter" data-filter=".ovid">Видео</a>
+                            </div>
+                            <div class="bold-separator"><span></span></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="gallery-items three-coulms grid-small-pad popup-gallery">
+                                        <!-- 1 -->
+                                        <div class="gallery-item menu">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1.jpg" title="Image information">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="gallery-item rest">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1.jpg">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1_1.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="gallery-item   menu">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1.jpg">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1_2.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 4 -->
+                                        <div class="gallery-item gallery-item-second  menu">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1_2.jpg">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1_1.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 5 -->
+                                        <div class="gallery-item  ovid">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="https://www.youtube.com/watch?v=r7TnaQ4dwwo" class="popup-youtube">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-play-circle"></i>
+                                                    <img  src="images/gallery/2.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 6 -->
+                                        <div class="gallery-item  rest">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1.jpg">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1_1.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 7 -->
+                                        <div class="gallery-item  menu">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="images/gallery/1.jpg">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-search"></i>
+                                                    <img  src="images/gallery/1.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 8 -->
+                                        <div class="gallery-item  ovid rest">
+                                            <div class="grid-item-holder">
+                                                <div class="box-item">
+                                                    <a href="https://player.vimeo.com/video/89546048" class="popup-vimeo">
+                                                    <span class="overlay"></span>
+                                                    <i class="fa fa-play-circle"></i>
+                                                    <img  src="images/gallery/1.jpg"   alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end gallery items -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--=============== parallax section  ===============-->
+                    <section class="parallax-section" id="sec5">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Резервация столиков онлайн</h2>
+                            <h3>Заказ столов онлайн - это очень просто</h3>
+                        </div>
+                    </section>
+                    <!--section end-->
+                    <!--=============== reservation ===============-->
+                    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-title">
+                                        <h4>Информация о резервации столов</h4>
+                                        <div class="separator color-separator"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="inner">
+                                                <p> После подачи заявки с Вами свяжется наш администратор для уточнения деталей</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bold-separator">
+                                        <span></span>
+                                    </div>
+                                    <div class="reservation-form-holder">
+                                        <div class="reservation-form">
+                                            <div id="message"></div>
+                                            <form method="post" action="php/reservation.php" name="reservationform" id="reservation-form">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h3>Детали резервации</h3>
+                                                        <!--date-->
+                                                        <input name="resdate" class="myInput" id="resdate" data-lang="en" data-years="2015-2016" data-format="YYYY-MM-DD" data-sundayfirst="false" value="Дата" onClick="this.select()" >
+                                                        <!--time-->
+                                                        <select id="restime" class="form-control">
+                                                            <option selected="selected" value="7:00am">7:00</option>
+                                                            <option value="7:30am">7:30</option>
+                                                            <option value="8:00am">8:00</option>
+                                                            <option value="8:30am">8:30</option>
+                                                            <option value="9:00am">9:00</option>
+                                                            <option value="9:30am">9:30</option>
+                                                            <option value="10:00am">10:00</option>
+                                                            <option value="10:30am">10:30</option>
+                                                            <option value="11:00am">11:00</option>
+                                                            <option value="11:30am">11:30</option>
+                                                            <option value="12:00pm">12:00</option>
+                                                            <option value="12:30pm">12:30</option>
+                                                            <option value="13:00pm">13:00</option>
+                                                            <option value="14:30pm">14:30</option>
+                                                            <option value="15:00pm">15:00</option>
+                                                            <option value="16:30pm">16:30</option>
+                                                            <option value="17:00pm">17:00</option>
+                                                            <option value="18:30pm">18:30</option>
+                                                            <option value="19:00pm">19:00</option>
+                                                            <option value="20:30pm">20:30</option>
+                                                            <option value="21:00pm">21:00</option>
+                                                            <option value="22:30pm">22:30</option>
+                                                            <option value="23:00pm">23:00</option>
+
+                                                        </select>
+                                                        <!--restaurant-->
+                                                        <select class="form-control" id="resrest" onClick="this.select()">
+                                                            <option value="Заведение 1">Заведение 1</option>
+                                                            <option value="Заведение 2">Заведение 2</option>
+                                                            <option value="Заведение 3 ">Заведение 3</option>
+                                                        </select>
+                                                        <!--person-->
+                                                        <select id="numperson" class="form-control" onClick="this.select()" >
+                                                            <option value="1">1 Персона</option>
+                                                            <option value="2">2 Персоны</option>
+                                                            <option value="3">3 Персоны</option>
+                                                            <option value="4">4 Персоны</option>
+                                                            <option value="5">5 Персон</option>
+                                                            <option value="6">6 Персон</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h3>Контакты для обратной связи</h3>
+                                                        <!--name-->
+                                                        <input name="name" type="text" id="name"  onClick="this.select()" value="Имя" >
+                                                        <!--mail-->
+                                                        <input name="email" type="text" id="email" onClick="this.select()" value="E-mail" >
+                                                        <!--phone-->
+                                                        <input name="phone" type="text" id="phone" onClick="this.select()" value="Телефон">
+                                                        <!--message-->
+                                                        <textarea name="comments"  id="comments" onClick="this.select()" >Сообщение</textarea>
+                                                    </div>
+                                                </div>
+                                                <button type="submit"  id="submit-res">Зарезервировать</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--section end-->
+                    <section class="parallax-section" id="sec6">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Наши контакты</h2>
+                            <h3>Как нас найти</h3>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-details">
+                                        <h3>Контактная информация</h3>
+                                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
+                                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="contact-details">
+                                        <h4>Заведение</h4>
+                                        <ul>
+                                            <li><a href="#">Адрес</a></li>
+                                            <li><a href="#">Телефон</a></li>
+                                            <li><a href="#">yourmail@domain.com</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Заведение</h4>
+                                        <ul>
+                                            <li><a href="#">Адрес</a></li>
+                                            <li><a href="#">Телефон</a></li>
+                                            <li><a href="#">yourmail@domain.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="contact-details">
+                                        <h4>Заведение</h4>
+                                        <ul>
+                                            <li><a href="#">Адрес</a></li>
+                                            <li><a href="#">Телефон</a></li>
+                                            <li><a href="#">yourmail@domain.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-title">
+                                        <h3>Мы на карте</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="no-padding">
+                        <div class="map-box">
+                            <div class="map-holder" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
+                                <div  id="map-canvas"></div>
+                            </div>
+                        </div>
+                    </section>
+                <!--    <section>
+                        <div class="triangle-decor"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-title">
+                                        <h3>Get in Touch</h3>
+                                        <h4 class="decor-title">Write us</h4>
+                                        <div class="separator color-separator"></div>
+                                    </div>
+                                    <div class="contact-form-holder">
+                                        <div id="contact-form">
+                                            <div id="message2"></div>
+                                            <form method="post" action="php/contact.php" name="contactform" id="contactform">
+                                                <input name="name" type="text" class="name"  onClick="this.select()" value="Name" >
+                                                <input name="email" type="text" class="email" onClick="this.select()" value="E-mail" >
+                                                <input name="phone" type="text" class="phone" onClick="this.select()" value="Phone" >
+                                                <textarea name="comments"  class="comments" onClick="this.select()" >Message</textarea>
+                                                <button type="submit"  id="submit">Send </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--=============== Opening Hours ===============-->
+                    <section class="parallax-section">
+                        <div class="bg bg-parallax" style="background-image:url(https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>Время работы</h2>
+                            <h3>Звоните для бронирования</h3>
+                            <div class="bold-separator">
+                                <span></span>
+                            </div>
+                            <div class="work-time">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Рабочие дни</h3>
+                                        <div class="hours">
+                                            09:00<br>
+                                            22:00
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Выходные дни</h3>
+                                        <div class="hours">
+                                            11:00<br>
+                                            00:00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="big-number"><a href="#">+38(000)1234567</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--section end-->
+
+                     -->
+
+                </div>
+                <!--content end-->

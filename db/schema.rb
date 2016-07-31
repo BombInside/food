@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719083626) do
+ActiveRecord::Schema.define(version: 20160720193855) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -61,6 +61,24 @@ ActiveRecord::Schema.define(version: 20160719083626) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.datetime "start_date"
+    t.boolean  "posted"
+    t.text     "desctiption"
+    t.integer  "restoraunt_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "event_title_file_name"
+    t.string   "event_title_content_type"
+    t.integer  "event_title_file_size"
+    t.datetime "event_title_updated_at"
+  end
+
+  add_index "events", ["restoraunt_id"], name: "index_events_on_restoraunt_id"
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "galleries", force: true do |t|
     t.string   "title"
@@ -123,6 +141,11 @@ ActiveRecord::Schema.define(version: 20160719083626) do
     t.time     "wr_time_end"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "res_logo_id"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "restoraunts", ["reservation_id"], name: "index_restoraunts_on_reservation_id"

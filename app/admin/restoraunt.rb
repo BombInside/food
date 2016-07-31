@@ -1,18 +1,28 @@
 ActiveAdmin.register Restoraunt do
-  permit_params :title, :phone, :w_time_start, :w_time_end, :wr_time_start, :wr_time_end
+  menu label: "Заведения"
+  config.filters = false
+  permit_params :title, :phone, :w_time_start, :w_time_end, :wr_time_start, :wr_time_end, :logo
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+  sidebar :help do
+    div h3 b "Связь с разработчиком:"
+      ul do
+        li b "xtc.inside@hotmail.com"
+        li b "+380509480342"
+      end
+  end
+
+  form do |f|
+    f.inputs 'Подробности' do
+      f.input :title
+    end
+    f.inputs 'Телефон', :phone
+   
+    f.inputs "Attachment", :multipart => true do
+  			f.input :logo, :as => :file
+  	end
+
+    f.actions
+  end
 
 
 end

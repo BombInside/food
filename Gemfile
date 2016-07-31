@@ -53,3 +53,7 @@ gem 'omniauth-facebook'
 gem 'delayed_job_active_record'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-4-x' # For 4.x
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+gem "paperclip"

@@ -74,6 +74,6 @@ class RestorauntsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restoraunt_params
-      params.require(:restoraunt).permit(:user_id, :reservation_id, :title, :phone, :w_time_start, :w_time_end, :wr_time_start, :wr_time_end)
+      params.require(:restoraunt).permit(:user_id, :reservation_id, :title, :phone, :w_time_start, :w_time_end, :wr_time_start, :wr_time_end, :logo)
     end
 end
