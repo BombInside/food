@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
@@ -41,7 +40,7 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 gem 'rails_12factor'
-gem 'puma'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'
