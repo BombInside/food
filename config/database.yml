@@ -7,24 +7,23 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: ec2-54-228-189-127.eu-west-1.compute.amazonaws.com
-  database: d3fk056jmnsgti
-  port: 5432
+  host: localhost
+  database: food
   pool: 5
-  username: laglpcrkbzcwmo
-  password: XnlHiRidBjytvN2mk4N0QbKzS6
+  username: postgres
+  password: admin229054
 
 development:
   <<: *default
-  database: d3fk056jmnsgti
+  database: dev_food
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: d3fk056jmnsgti
+  database: test_food
 
 production:
   <<: *default
-  database: d3fk056jmnsgti
+  database: prod_food
