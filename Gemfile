@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bundler'
+gem 'rails_12factor'
+gem 'puma'
 
 group :development do
   gem 'better_errors'
